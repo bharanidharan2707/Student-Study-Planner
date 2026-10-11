@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📚 Study Planner</h1>
+            <p>Plan your studies. Achieve your goals.</p>
+        </header>
+
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-heading">
+                <h2>Study Progress</h2>
+                <span id="progress-text">0%</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add Study Task</h2>
+
+            <form id="study-form">
+                <label for="task">Task Name</label>
+                <input
+                    type="text"
+                    id="task"
+                    placeholder="e.g. Learn Python loops"
+                    maxlength="100"
+                    required
+                >
+
+                <label for="subject">Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="e.g. Python"
+                    maxlength="50"
+                    required
+                >
+
+                <label for="deadline">Study Deadline</label>
+                <input type="date" id="deadline" required>
+
+                <button type="submit">+ Add Task</button>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <h2>My Study Tasks</h2>
+
+            <div class="filters">
+                <button type="button" class="filter-btn active"
+                    data-filter="all">All</button>
+
+                <button type="button" class="filter-btn"
+                    data-filter="pending">Pending</button>
+
+                <button type="button" class="filter-btn"
+                    data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="task-list"></ul>
+        </section>
+
+        <footer>
+            <p>Small steps every day lead to big results! 🎯</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

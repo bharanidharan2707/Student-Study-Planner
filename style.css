@@ -1,0 +1,245 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+    background: #f1f5fb;
+    color: #202b3c;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #3156c8;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #68758a;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.card {
+    background: white;
+    padding: 18px 10px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #dce4f0;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #68758a;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #3156c8;
+    margin-bottom: 5px;
+}
+
+.progress-section,
+.form-section,
+.tasks-section {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 12px #dce4f0;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.progress-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#progress-text {
+    font-weight: bold;
+    color: #3156c8;
+}
+
+.progress-track {
+    height: 12px;
+    background: #e3e9f5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #26a269;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 15px;
+    font-size: 14px;
+}
+
+form button {
+    margin-top: 18px;
+    width: 100%;
+    background: #3156c8;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.filter-btn {
+    background: #e8edf7;
+    color: #34415a;
+}
+
+.filter-btn.active {
+    background: #3156c8;
+    color: white;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.task-details {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.task-details h3 {
+    font-size: 16px;
+    margin: 0 0 7px;
+}
+
+.task-details p {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #68758a;
+}
+
+.task-item.done h3 {
+    text-decoration: line-through;
+    color: #8490a0;
+}
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+.complete-btn {
+    background: #d7f5e3;
+    color: #167443;
+}
+
+.delete-btn {
+    background: #ffe0e0;
+    color: #b42323;
+}
+
+.empty-message {
+    text-align: center;
+    color: #68758a;
+    padding: 20px 0;
+}
+
+footer {
+    text-align: center;
+    color: #68758a;
+    font-size: 14px;
+}
+
+@media (max-width: 550px) {
+    .dashboard {
+        gap: 8px;
+    }
+
+    .card {
+        padding: 12px 5px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 23px;
+    }
+
+    .progress-section,
+    .form-section,
+    .tasks-section {
+        padding: 16px;
+    }
+
+    .task-item {
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        flex-direction: column;
+    }
+}
